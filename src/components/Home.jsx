@@ -1,9 +1,11 @@
 import React from 'react';
 import {HomeProducts} from './HomeProducts';
 import uniqid from 'uniqid';
+import {Navbar} from './Navbar';
 
 const Home = () => {
     return <>
+        <Navbar/>
         <div style={{backgroundColor:'#EBEDEC'}}>
             <img src="https://m.media-amazon.com/images/I/51r+YpWo9rL._SX1500_.jpg" alt="container-img" className='w-full -z-1 -mb-40' style={{maskImage: 'linear-gredient(to bottom,rgb(0,0,0,1),rgba(0,0,0,0))'}} />
             <div className='grid grid-cols-2 gap-4 '>
