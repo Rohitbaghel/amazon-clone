@@ -1,5 +1,7 @@
 import React from 'react';
+import {CheckoutProducts} from './CheckoutProducts';
 import {Navbar} from './Navbar';
+import {Subtotal} from './Subtotal';
 
 export const Checkout = () => {
   return <>
@@ -10,42 +12,12 @@ export const Checkout = () => {
         <p className='text-xl font-extrabold'>Your Shopping Basket</p>
       </div>
       <div className='mt-3 p-2  border  w-1/4' style={{backgroundColor:'#EBEDEC'}}>
-        <div className='flex'>
-          <p>Subtotal (0 items) :</p> <strong></strong>
-        </div>
-        <input type="checkbox" name="" id="checkboxInput" />
-        <label htmlFor="checkboxInput">  This Order contains a gift</label> <br />
-       
-<div className="flex justify-center">
-          <button className='border-black border-2 pl-2 pr-2 rounded-lg bg-yellow-500 mt-2 ' >Proceed to checkout</button>
-          </div>
+  <Subtotal/>
      
       </div>
-  </div>
+    </div>
+    <CheckoutProducts/>
  </>;
 };
 
 
-// return
-//  <div className="subtotal">
-//     <CurrencyFormat
-//       renderText={(value) => (
-//           <p>
-//             {/* Part of the homework */}
-//             Subtotal ({basket.length} items): <strong>{value}
-//             </strong>
-//           </p>
-//           <small className="subtotal_gift">
-//             <input type="checkbox" /> This order contains a
-//             gift
-//           </small>
-//         </>
-//      ) }
-//       decimalScale={2}
-//       value={getBasketTotal(basket)} // Part of the homework
-//       displayType={"text"}
-//      thousandSeparator={true
-//       prefix={"$"}
-//     />
-//     <button>Proceed to Checkout</button>
-//  </div>
