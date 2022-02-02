@@ -1,10 +1,10 @@
 {
   "cart": [
     {
-      "title": "HP 24mh FHD Monitor - Computer Monitor with 23.8-Inch IPS Display (1080p) - Built-In Speakers and VESA Mounting - Height/Tilt Adjustment for...",
-      "price": 15050,
-      "image": "https://m.media-amazon.com/images/I/91fAU6mxFsL._AC_UL320_.jpg",
-      "rating": 5,
+      "title": "Amazon Basics 8-Sheet Capacity, Cross-Cut Paper and Credit Card Shredder, 4.1 Gallon",
+      "price": 2350,
+      "image": "https://m.media-amazon.com/images/I/71IywmQMCTL._AC_UL320_.jpg",
+      "rating": 4,
       "id": 1
     },
     {
@@ -15,10 +15,10 @@
       "id": 2
     },
     {
-      "title": "Razer Cynosa Chroma Gaming Keyboard: Individually Backlit RGB Keys - Spill-Resistant Design - Programmable Macro Functionality - Quiet & Cushioned",
+      "title": "Amazon Basics 8-Sheet Capacity, Cross-Cut Paper and Credit Card Shredder, 4.1 Gallon",
       "price": 2350,
-      "image": "https://m.media-amazon.com/images/I/61WgmLgwuQL._AC_UY218_.jpg",
-      "rating": 5,
+      "image": "https://m.media-amazon.com/images/I/71IywmQMCTL._AC_UL320_.jpg",
+      "rating": 4,
       "id": 3
     },
     {
@@ -36,10 +36,10 @@
       "id": 5
     },
     {
-      "title": "Razer Cynosa Chroma Gaming Keyboard: Individually Backlit RGB Keys - Spill-Resistant Design - Programmable Macro Functionality - Quiet & Cushioned",
-      "price": 2350,
-      "image": "https://m.media-amazon.com/images/I/61WgmLgwuQL._AC_UY218_.jpg",
-      "rating": 5,
+      "title": "Roku Express 4K+ 2021 | Streaming Media Player HD/4K/HDR with Smooth Wireless Streaming and Roku Voice Remote with TV Controls, Includes Premium HDMI®...",
+      "price": 3550,
+      "image": "https://m.media-amazon.com/images/I/71E4InwfcPL._AC_UL320_.jpg",
+      "rating": 3,
       "id": 6
     },
     {
@@ -50,25 +50,11 @@
       "id": 7
     },
     {
-      "title": "Razer Cynosa Chroma Gaming Keyboard: Individually Backlit RGB Keys - Spill-Resistant Design - Programmable Macro Functionality - Quiet & Cushioned",
+      "title": "Amazon Basics 8-Sheet Capacity, Cross-Cut Paper and Credit Card Shredder, 4.1 Gallon",
       "price": 2350,
-      "image": "https://m.media-amazon.com/images/I/61WgmLgwuQL._AC_UY218_.jpg",
-      "rating": 5,
+      "image": "https://m.media-amazon.com/images/I/71IywmQMCTL._AC_UL320_.jpg",
+      "rating": 4,
       "id": 8
-    },
-    {
-      "title": "Razer Cynosa Chroma Gaming Keyboard: Individually Backlit RGB Keys - Spill-Resistant Design - Programmable Macro Functionality - Quiet & Cushioned",
-      "price": 2350,
-      "image": "https://m.media-amazon.com/images/I/61WgmLgwuQL._AC_UY218_.jpg",
-      "rating": 5,
-      "id": 9
-    },
-    {
-      "title": "18CM Stainless Steel Dog Bowl with Rubber Base for Small Medium Large Dogs Pets Feeder Bowl and Water Bowl 1pc Pet Supplies Comfortable...",
-      "price": 981,
-      "image": "https://m.media-amazon.com/images/I/51L0K4MPDOL._AC_UL320_.jpg",
-      "rating": 3,
-      "id": 10
     }
   ]
 }

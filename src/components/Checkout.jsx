@@ -11,7 +11,7 @@ export const Checkout = () => {
       </div>
       <div className='mt-3 p-2  border  w-1/4' style={{backgroundColor:'#EBEDEC'}}>
         <div className='flex'>
-          <p>Subtotal (0 items) :</p> <strong>0</strong>
+          <p>Subtotal (0 items) :</p> <strong></strong>
         </div>
         <input type="checkbox" name="" id="checkboxInput" />
         <label htmlFor="checkboxInput">  This Order contains a gift</label> <br />
@@ -24,3 +24,28 @@ export const Checkout = () => {
   </div>
  </>;
 };
+
+
+// return
+//  <div className="subtotal">
+//     <CurrencyFormat
+//       renderText={(value) => (
+//           <p>
+//             {/* Part of the homework */}
+//             Subtotal ({basket.length} items): <strong>{value}
+//             </strong>
+//           </p>
+//           <small className="subtotal_gift">
+//             <input type="checkbox" /> This order contains a
+//             gift
+//           </small>
+//         </>
+//      ) }
+//       decimalScale={2}
+//       value={getBasketTotal(basket)} // Part of the homework
+//       displayType={"text"}
+//      thousandSeparator={true
+//       prefix={"$"}
+//     />
+//     <button>Proceed to Checkout</button>
+//  </div>

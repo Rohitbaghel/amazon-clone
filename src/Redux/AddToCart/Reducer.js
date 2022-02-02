@@ -1,6 +1,10 @@
 import {ADD_TO_CART} from "./ActionType";
 
-const init = {cart:[]}
+const init={cart: []}
+// Selector
+export const getBasketTotal = (cart) =>
+    cart?.reduce((amount, item) => item.price+amount, 0);
+console.log(getBasketTotal);
 export const reducer=(state=init,{type,payload}) => {
     switch (type) {
         case ADD_TO_CART: 
