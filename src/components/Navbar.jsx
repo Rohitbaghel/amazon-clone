@@ -27,10 +27,12 @@ export const Navbar=() => {
                 style={{height:'34px',padding:'5px'}}/>
             </div>
             <div className='flex gap-4 text-white mt-2'>
+                <Link to="/login">
                 <div>
                 <span className='text-sm'>Returns</span><br />
                     <span className=''>Sign In</span>
                 </div>
+                </Link>
                 <div>
                     <span className='text-sm'>Returns</span><br />
                     <span>&Orders</span>
