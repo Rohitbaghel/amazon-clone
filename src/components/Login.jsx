@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 export const Login=() => {
     const [email, setEmail]=useState('');
@@ -10,7 +11,10 @@ export const Login=() => {
         e.preventDefault();
     }
     return <div className='flex flex-col border-2 border-black' style={{height: '100vh'}} >
-        <img src="https://pngimg.com/uploads/amazon/amazon_PNG24.png" alt="" className="w-28 mx-2 mt-4 object-contain ml-auto mr-auto mb-4" />
+        <Link to='/'>
+       
+            <img src="https://pngimg.com/uploads/amazon/amazon_PNG24.png" alt="" className="w-28 mx-2 mt-4 object-contain ml-auto mr-auto mb-4" />
+            </Link>
         <div className='flex flex-col h-fit w-80 border-r-4 p-5 border-2 border-grey-600 mr-auto ml-auto'>
             <p className='text-2xl font-bold mb-5 '>Sign-in</p>
             <form action="">
