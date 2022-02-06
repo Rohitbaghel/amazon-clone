@@ -1,16 +1,25 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-
+import { Auth,db } from './firebash';
+import { createUserWithEmailAndPassword} from 'firebase/auth';
 export const Login=() => {
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
     const signIn=(e) => {
         e.preventDefault();
     }
-    const createAccount =(e) => {
+    const createAccount=(e) => {
         e.preventDefault();
+        Auth
+            .createUserWithEmailAndPassword({email,password}).then((user) => {
+         console.log(user);
+        }).catch((error) => {
+        alert(error.message);
+         
+     })
+        
     }
-    return <div className='flex flex-col border-2 border-black' style={{height: '100vh'}} >
+    return <div className='flex flex-col border-2 ' style={{height: '100vh'}} >
         <Link to='/'>
        
             <img src="https://pngimg.com/uploads/amazon/amazon_PNG24.png" alt="" className="w-28 mx-2 mt-4 object-contain ml-auto mr-auto mb-4" />
@@ -19,9 +28,9 @@ export const Login=() => {
             <p className='text-2xl font-bold mb-5 '>Sign-in</p>
             <form action="">
                 <p className='mb-1'>Email</p>
-                <input type="text" autocomplete="off" value={email} onChange={e=>setEmail(e.target.value)}  className="h-8 mb-3 bg-white border-black border-2 " style={{width:'98%'}}/>
+                <input type="text" autoComplete="off" value={email} onChange={e=>setEmail(e.target.value)}  className="h-8 mb-3 bg-white border-black border-2 " style={{width:'98%'}}/>
                 <p className='mb-1'>Password</p>
-                <input type="password" autocomplete='off' value={password} onChange={e=>setPassword(e.target.value)} className="h-8 mb-3 bg-white border-black border-2" style={{width:'98%'}} /><br />
+                <input type="password" autoComplete='off' value={password} onChange={e=>setPassword(e.target.value)} className="h-8 mb-3 bg-white border-black border-2" style={{width:'98%'}} /><br />
                 <button className='border-2 w-full h-8 mt-3 text-xl font-bold bg-yellow-500 rounded-sm ' type="submit" onClick={signIn} >Sign in</button>
             </form>
             <p className='text-md m-auto mt-2'>
