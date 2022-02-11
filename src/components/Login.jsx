@@ -11,7 +11,7 @@ export const Login=() => {
         try { 
             const User=await signInWithEmailAndPassword(Auth, email, password);
             alert('Login successful');
-            <Navigate to="/" />
+          
           
         } catch (e) {
             alert(e.message)
