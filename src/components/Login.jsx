@@ -1,22 +1,35 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link,Navigate} from 'react-router-dom';
+
 import { Auth,db } from './firebash';
-import { createUserWithEmailAndPassword} from 'firebase/auth';
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword} from 'firebase/auth';
 export const Login=() => {
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
-    const signIn=(e) => {
+    const signIn=async (e) => {
         e.preventDefault();
+        try { 
+            const User=await signInWithEmailAndPassword(Auth, email, password);
+            alert('Login successful');
+            <Navigate to="/" />
+          
+        } catch (e) {
+            alert(e.message)
+            
+        }
+      
     }
-    const createAccount=(e) => {
+    const createAccount= async (e) => {
         e.preventDefault();
-        Auth
-            .createUserWithEmailAndPassword({email,password}).then((user) => {
-         console.log(user);
-        }).catch((error) => {
-        alert(error.message);
-         
-     })
+        try {
+            const User=await createUserWithEmailAndPassword(Auth, email, password);
+            alert('Account successful');
+            // console.log(User)/
+            <Navigate to="/" />
+        } catch (e) {
+           alert(e.message)
+            
+        }
         
     }
     return <div className='flex flex-col border-2 ' style={{height: '100vh'}} >

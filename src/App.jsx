@@ -5,7 +5,25 @@ import Home from './components/Home';
 import {Navbar} from './components/Navbar';
 import {Routes,Route} from 'react-router-dom';
 import {Login} from './components/Login';
+import {useEffect} from 'react';
+import {onAuthStateChanged} from 'firebase/auth';
+import {Auth} from './components/firebash';
+import {useDispatch, useSelector} from 'react-redux';
+import {LoginUser} from './Redux/Auth/Action';
+
 function App() {
+  const dispatch=useDispatch()
+
+  useEffect(() => {
+    Auth.onAuthStateChanged(AuthUser => {
+      // console.log( + AuthUser)
+      if (AuthUser) {
+        dispatch(LoginUser(AuthUser))
+      } else {
+        dispatch(LoginUser(null))
+      }
+ })
+  },[])
   return (
     <div className="App">
       <Routes>

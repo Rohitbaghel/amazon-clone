@@ -3,7 +3,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasket from '@mui/icons-material/ShoppingBasket';
 import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import {Auth} from './firebash';
+import {signOut} from 'firebase/auth';
 export const Navbar=() => {
+    const {user} = useSelector(state => ({user: state.Auth.user}))
+//   console.log('user: is here ', )
   const [cart,setCart] = useState([])
     const getCartLength= async() => {
         const res=await fetch('http://localhost:3002/cart')
@@ -12,7 +16,12 @@ export const Navbar=() => {
     }
     useEffect(() => {
         getCartLength()
-    },[])
+    }, [])
+    const handleAuthenticaton = () => { 
+        if (user) {
+          signOut(Auth)
+        }
+        }
     return <>
         <div className='flex place-content-evenly sticky bg-black'>
             <div>
@@ -27,10 +36,10 @@ export const Navbar=() => {
                 style={{height:'34px',padding:'5px'}}/>
             </div>
             <div className='flex gap-4 text-white mt-2'>
-                <Link to="/login">
-                <div>
+                <Link to={!user && "/login"} >
+                <div onClick={handleAuthenticaton}>
                 <span className='text-sm'>Returns</span><br />
-                    <span className=''>Sign In</span>
+                        <span className=''>{user == null ? 'SignIn' : 'SignOut'}</span>
                 </div>
                 </Link>
                 <div>

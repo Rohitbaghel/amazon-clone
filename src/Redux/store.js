@@ -1,4 +1,6 @@
-import {reducer} from "./AddToCart/Reducer";
-import {createStore} from "redux";
+import {reducer as AddToCartReducer} from "./AddToCart/Reducer";
+import {combineReducers, createStore} from "redux";
+import {reducer as AuthReducer} from "./Auth/reducer";
 
-export const store = createStore(reducer)
+const rootReducer = combineReducers({AddToCart:AddToCartReducer, Auth:AuthReducer})
+export const store = createStore(rootReducer)
