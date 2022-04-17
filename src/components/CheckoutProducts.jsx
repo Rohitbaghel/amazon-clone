@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 
 export const CheckoutProducts=() => {
@@ -9,7 +10,10 @@ export const CheckoutProducts=() => {
     }
     useEffect(() => {
         getCartLength()
-    },[])
+    }, [])
+    const RemoveproductFromcart= () => {
+       
+    }
     return <>
         <div className='w-3/4 -mt-5'>
             {cart.map((e) => (
@@ -27,10 +31,11 @@ export const CheckoutProducts=() => {
                     <p key={i}>⭐</p>
                      ))}
                         </div>
-                        <button className='border-blue-600 border-2 p-1 bg-yellow-400 font-extrabold rounded-2xl mt-2 justify-center"'>Remove from Cart</button>
+                        <button className='border-blue-600 border-2 p-1 bg-yellow-400 font-extrabold rounded-2xl mt-2 justify-center
+                        'onClick={RemoveproductFromcart}>Remove from Cart</button>
                     </div>
                 
-              
+               
                 </div>
                
                 

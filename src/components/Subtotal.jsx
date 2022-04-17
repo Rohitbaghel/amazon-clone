@@ -1,8 +1,11 @@
 import React, {useState,useEffect} from 'react';
 import CurrencyFormat from 'react-currency-format';
+import {useNavigate} from 'react-router-dom';
 export const Subtotal=() => {
     const [cart, setCart]=useState([])
-    const [total, setTotal]=useState(0)
+    const [total, setTotal]=useState(0);
+    const navigate=useNavigate()
+    
     const getCartLength= async() => {
         const res=await fetch('http://localhost:3002/cart')
         const data=await res.json()
@@ -43,7 +46,9 @@ export const Subtotal=() => {
             thousandSeparator={true}
             prefix={'₹'}
         />
-      <button className='border-2 border-black m-auto block p-1 mt-4 bg-yellow-600 font-bold'>Proceed to Checkout</button>
+        <button className='border-2 border-black m-auto block p-1 mt-4 bg-yellow-600 font-bold' onClick={() => {
+        navigate('/thankyou')    
+      }}>Proceed to Checkout</button>
         
     </>;
 };

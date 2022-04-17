@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
-import {Link,Navigate} from 'react-router-dom';
-
-import { Auth,db } from './firebash';
+import {Link, useNavigate} from 'react-router-dom';
+import { Auth } from './firebash';
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword} from 'firebase/auth';
 export const Login=() => {
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
+    const Navigate = useNavigate()
     const signIn=async (e) => {
         e.preventDefault();
         try { 
             const User=await signInWithEmailAndPassword(Auth, email, password);
             alert('Login successful');
-          
+       Navigate('/')
           
         } catch (e) {
             alert(e.message)
@@ -25,7 +25,7 @@ export const Login=() => {
             const User=await createUserWithEmailAndPassword(Auth, email, password);
             alert('Account successful');
             // console.log(User)/
-            <Navigate to="/" />
+           
         } catch (e) {
            alert(e.message)
             
