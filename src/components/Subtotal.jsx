@@ -47,7 +47,7 @@ export const Subtotal=() => {
             prefix={'₹'}
         />
         <button className='border-2 border-black m-auto block p-1 mt-4 bg-yellow-600 font-bold' onClick={() => {
-        navigate('/thankyou')    
+        navigate('/payment')    
       }}>Proceed to Checkout</button>
         
     </>;

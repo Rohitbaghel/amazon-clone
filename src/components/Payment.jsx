@@ -147,7 +147,9 @@ export const Payment=() => {
             prefix={'₹'}
                           />
                           <button disabled={processing||disabled||
-                              succeeded}>
+                              succeeded} onClick={() => {
+                               
+                              }}>
                       <span>{processing ? <p>Processing </p>:
                       "Buy Now"}</span>  
                       </button>
